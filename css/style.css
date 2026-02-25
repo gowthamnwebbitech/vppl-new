@@ -370,9 +370,14 @@ header .logo-scroll {
   font-weight: 500;
   font-size: 16px;
   color: #fff;
-  /* keep or change as needed */
   align-items: center;
-  /* vertically center everything */
+}
+
+/* Hide on Mobile + Tablet */
+@media (max-width: 991px) {
+  .header-contact {
+    display: none !important;
+  }
 }
 
 .header-contact .phone {
@@ -2129,11 +2134,18 @@ header.s2 #mainmenu>li>a {
   border-bottom: none;
 }
 
+
+/* Mobile Header */
 header.header-mobile {
-  position: fixed !important;
-  background: var(--title-font-color);
-  top: 0;
-  padding: 5px 0 0px 0;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    padding: 8px 0;
+    background: var(linear-gradient(135deg, #2293c4 0%, #1a749c 100%)) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    transition: all 0.3s ease;
 }
 
 header.header-mobile.logo-center {
@@ -22175,6 +22187,7 @@ img {
   .slider_text {
     padding-top: 0px;
   }
+
 }
 
 @media only screen and (max-width: 1090px) {
@@ -22324,7 +22337,7 @@ img {
     padding: 0;
     margin-top: 0;
     height: auto;
-    background: #111111;
+    /* background: #111111; */
   }
 
   #de-sidebar {

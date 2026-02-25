@@ -66,7 +66,7 @@
                 </div>
             </div>
 
-            <?php include 'newdemo.php'; ?>
+            <?php include 'ourcore.php'; ?>
 
             <!-- TICKER 2 -->
             <div class="aq2-ticker aq2-ticker--dark">
@@ -110,7 +110,7 @@
                 </div>
             </section>
 
-            <?php include 'projectindex.php'; ?>
+            <?php include 'homeproject.php'; ?>
 
             <?php include 'whychooseus.php'; ?>
 
