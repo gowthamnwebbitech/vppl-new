@@ -1,7 +1,7 @@
 <header class="vppl-navbar">
     <div class="container">
         <div class="vppl-nav-flex">
-            
+
             <div class="vppl-logo-wrap">
                 <a href="index.php">
                     <img src="images/vppl.svg" alt="VPPL Logo">
@@ -13,10 +13,11 @@
                     <li><a class="vppl-menu-link" href="index.php">Home</a></li>
                     <li><a class="vppl-menu-link" href="about.php">About Us</a></li>
                     <li class="vppl-has-dropdown">
-                        <a class="vppl-menu-link" href="#">Projects <i class="fa fa-chevron-down ms-1" style="font-size: 10px;"></i></a>
+                        <a class="vppl-menu-link" href="#">Projects <i class="fa fa-chevron-down ms-1"
+                                style="font-size: 10px;"></i></a>
                         <ul class="vppl-dropdown-box">
                             <li><a href="service-single.php">Water Treatment Plant</a></li>
-                            <li><a href="service-single.php">Reverse Osmosis Plant</a></li>
+                            <li><a href="reverse-osmosis-plant.php">Reverse Osmosis Plant</a></li>
                             <li><a href="water-softening-plant.php">Water Softening Plant</a></li>
                             <li><a href="ultra-filtration-plant.php">Ultra Filtration Plant</a></li>
                             <li><a href="iron-removal-plant.php">Iron Removal Plant</a></li>
@@ -32,12 +33,11 @@
                 </ul>
             </nav>
 
-            <div class="d-flex align-items-center">
-                <a href="tel:+919843514600" class="vppl-contact-pill d-none d-lg-flex">
+            <div class="d-flex align-items-center hidden xl:d-flex">
+                <a href="tel:+919843514600" class="vppl-contact-pill py-3 d-none d-xl-flex align-items-center">
                     <i class="fas fa-phone-alt"></i>
-                    <div class="vppl-contact-num">
-                        <span>+91 98435 14600</span>
-                        <span>+91 99438 35148</span>
+                    <div class="vppl-contact-num ms-2">
+                        <span>Get a Quote</span>
                     </div>
                 </a>
 
@@ -54,48 +54,48 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const vpplHeader = document.querySelector(".vppl-navbar");
-    const vpplMobileToggle = document.getElementById("vppl-mobile-toggle");
-    const vpplMenu = document.getElementById("vppl-mainmenu");
-    const vpplDropdownLink = document.querySelector(".vppl-has-dropdown > a");
+        const vpplHeader = document.querySelector(".vppl-navbar");
+        const vpplMobileToggle = document.getElementById("vppl-mobile-toggle");
+        const vpplMenu = document.getElementById("vppl-mainmenu");
+        const vpplDropdownLink = document.querySelector(".vppl-has-dropdown > a");
 
-    // 1. Sticky Header Effect
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 60) {
-            vpplHeader.classList.add("vppl-sticky");
-        } else {
-            vpplHeader.classList.remove("vppl-sticky");
-        }
-    });
-
-    // 2. Mobile Menu Toggle (Off-Canvas)
-    if (vpplMobileToggle) {
-        vpplMobileToggle.addEventListener("click", function () {
-            this.classList.toggle("vppl-active");
-            vpplMenu.classList.toggle("vppl-open");
-            // Lock body scroll when menu is open
-            document.body.style.overflow = vpplMenu.classList.contains("vppl-open") ? "hidden" : "";
-        });
-    }
-
-    // 3. Mobile Submenu Toggle
-    if (vpplDropdownLink) {
-        vpplDropdownLink.addEventListener("click", function (e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                this.parentElement.classList.toggle("vppl-active");
+        // 1. Sticky Header Effect
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 60) {
+                vpplHeader.classList.add("vppl-sticky");
+            } else {
+                vpplHeader.classList.remove("vppl-sticky");
             }
         });
-    }
 
-    // 4. Resize Cleanup
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 992) {
-            vpplMenu.classList.remove("vppl-open");
-            vpplMobileToggle.classList.remove("vppl-active");
-            document.body.style.overflow = "";
-            document.querySelectorAll('.vppl-has-dropdown').forEach(el => el.classList.remove('vppl-active'));
+        // 2. Mobile Menu Toggle (Off-Canvas)
+        if (vpplMobileToggle) {
+            vpplMobileToggle.addEventListener("click", function () {
+                this.classList.toggle("vppl-active");
+                vpplMenu.classList.toggle("vppl-open");
+                // Lock body scroll when menu is open
+                document.body.style.overflow = vpplMenu.classList.contains("vppl-open") ? "hidden" : "";
+            });
         }
+
+        // 3. Mobile Submenu Toggle
+        if (vpplDropdownLink) {
+            vpplDropdownLink.addEventListener("click", function (e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle("vppl-active");
+                }
+            });
+        }
+
+        // 4. Resize Cleanup
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 992) {
+                vpplMenu.classList.remove("vppl-open");
+                vpplMobileToggle.classList.remove("vppl-active");
+                document.body.style.overflow = "";
+                document.querySelectorAll('.vppl-has-dropdown').forEach(el => el.classList.remove('vppl-active'));
+            }
+        });
     });
-});
 </script>

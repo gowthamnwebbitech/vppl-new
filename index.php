@@ -26,7 +26,7 @@
                                 class="aq2-hero__slide-img">
                         </div>
                         <div class="swiper-slide aq2-hero__slide">
-                            <img src="images/banner/slider3.jpg" alt="VPPL Plants" class="aq2-hero__slide-img">
+                            <img src="images/banner/banners2.jpg" alt="VPPL Plants" class="aq2-hero__slide-img">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>

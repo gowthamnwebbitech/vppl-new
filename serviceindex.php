@@ -202,11 +202,11 @@
                 <div class="col-lg-4 order-1 order-lg-2">
                     <div class="position-relative" id="imageContainer" style="opacity: 0;">
                         <div class="floating-badge">
-                            <i class="fas fa-certificate text-primary"></i>
+                            <i class="fas fa-certificate "></i>
                             <span class="fw-bold vppl-dark">ISO Certified Excellence</span>
                         </div>
                         <div class="image-mask" id="tiltImg">
-                            <img src="https://eleetpro.com/wp-content/uploads/2024/03/Water-And-Waste-Water.jpg" alt="Water Engineering" class="main-eng-img">
+                            <img src="images/banner/banners2.jpg" alt="Water Engineering" class="main-eng-img">
                             <div id="bubbleContainer"></div>
                         </div>
                     </div>

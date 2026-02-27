@@ -10,7 +10,7 @@
         </svg>
     </div>
 
-    <canvas id="cursor-canvas"></canvas>
+    <!-- <canvas id="cursor-canvas"></canvas> -->
 
     <section class="aq-hero-section">
         <div class="container">
@@ -18,15 +18,15 @@
                 <div class="col-lg-5 order-1 order-lg-2">
                     <div class="image-stack">
                         <div class="stats-pill" id="float-pill">
-                            <span class="fw-bold text-primary"><i class="fas fa-shield-halved me-2"></i>Industrial
+                            <span class="fw-bold "><i class="fas fa-shield-halved me-2"></i>Industrial
                                 Grade</span>
                         </div>
                         <div class="liquid-frame frame-sub" id="blob-sub">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800"
+                            <img src="images/banner/water1.jpg"
                                 alt="Tech">
                         </div>
                         <div class="liquid-frame frame-main" id="blob-main">
-                            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&q=80&w=1000"
+                            <img src="images/banner/water2.jpg"
                                 alt="Water Engineering">
                         </div>
                     </div>

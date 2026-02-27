@@ -32,12 +32,12 @@
     --c-accent: #0ea5e9;
     --c-blue-deep: #2563eb;
     --c-border: rgba(15, 23, 42, 0.08);
-    --grad-primary: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
+    --grad-primary: linear-gradient(90deg, #0ea5e9 0%, #0B5F9F 100%);
 
     --vppl-primary: #2293c4;
     --vppl-primary-soft: rgba(34, 147, 196, 0.1);
     --vppl-dark: #0f172a;
-    --vppl-card-bg: linear-gradient(135deg, #2293c4 0%, #1a749c 100%);
+    --vppl-card-bg: linear-gradient(90deg, #0ea5e9 0%, #0B5F9F 100%);
     --white: #ffffff;
     --bg-light: #f8fafc;
 
@@ -1630,6 +1630,7 @@ body {
 .aq-title {
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 700;
+    color: var(--bg-light);
 }
 
 .aq-list {
@@ -1678,6 +1679,7 @@ body {
     font-weight: 700;
     opacity: 0.8;
     transition: .3s;
+    color: var(--bg-light);
 }
 
 .aq-row:hover .aq-num {
@@ -1694,11 +1696,14 @@ body {
 .aq-row-title {
     font-size: 1.2rem;
     font-weight: 600;
+    color: var(--bg-light);
 }
 
 .aq-row-desc {
     font-size: 0.95rem;
     max-width: 720px;
+        color: var(--bg-light);
+
 }
 
 /* ========================= */
@@ -1900,10 +1905,9 @@ body {
     }
 }
 
-
 /* --- Root Variables --- */
 :root {
-    --vppl-gradient: linear-gradient(135deg, #2293c4 0%, #1a749c 100%);
+    --vppl-gradient: linear-gradient(90deg, #0ea5e9 0%, #0B5F9F 100%);
     --vppl-white: #ffffff;
     --vppl-dark: #0f172a;
     --vppl-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1933,10 +1937,17 @@ body {
     align-items: center;
 }
 
+/* --- Logo: 68px and Pure White --- */
 .vppl-logo-wrap img {
-    height: 48px;
+    height: 68px;
     width: auto;
-    transition: transform 0.3s ease;
+    /* Force logo to white using filters */
+    filter: brightness(0) invert(1); 
+    transition: all 0.4s ease;
+}
+
+.vppl-navbar.vppl-sticky .vppl-logo-wrap img {
+    height: 55px; /* Shrinks slightly on scroll for better UX */
 }
 
 /* --- Desktop Menu --- */
@@ -2006,9 +2017,9 @@ body {
     padding-left: 20px;
 }
 
-/* --- Header Contact Pill --- */
+/* --- Header Contact Pill & Visibility Logic --- */
 .vppl-contact-pill {
-    display: flex;
+    display: none; /* Hidden by default */
     align-items: center;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(5px);
@@ -2016,6 +2027,7 @@ body {
     border-radius: 50px;
     color: var(--vppl-white);
     text-decoration: none;
+    transition: var(--vppl-transition);
 }
 
 .vppl-contact-pill i {
@@ -2025,12 +2037,20 @@ body {
 .vppl-contact-num {
     display: flex;
     flex-direction: column;
+    gap: 4px;
     line-height: 1.2;
 }
 
 .vppl-contact-num span {
-    font-size: 11px;
+    font-size: 13px; /* Slightly smaller for better fit */
     font-weight: 700;
+}
+
+/* Only show contact pill on XL screens (1200px and up) */
+@media (min-width: 1200px) {
+    .vppl-contact-pill {
+        display: flex;
+    }
 }
 
 /* --- Mobile Toggle --- */
@@ -2054,6 +2074,10 @@ body {
 
 /* --- Mobile Responsive Logic --- */
 @media (max-width: 992px) {
+    .vppl-logo-wrap img {
+        height: 50px; /* Smaller logo for mobile devices */
+    }
+
     .vppl-menu-list {
         position: fixed;
         top: 0;
@@ -2093,7 +2117,6 @@ body {
         display: block;
     }
 
-    /* Cross animation for mobile button */
     .vppl-mobile-btn.vppl-active span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
         background: var(--vppl-dark);
@@ -2108,8 +2131,6 @@ body {
         background: var(--vppl-dark);
     }
 }
-
-
 
 /* Wrapper and Background */
 .vpp-ft-main-wrapper {
@@ -2294,4 +2315,11 @@ body {
     .vpp-ft-bottom-flex { flex-direction: column; gap: 15px; text-align: center; }
     .vpp-ft-contact-card { margin-top: 30px; }
     .vpp-ft-legal-links { justify-content: center; }
+}
+
+
+@media (max-width: 1200px) {
+    .vppl-contact-pill {
+        display: none !important;
+    }
 }
