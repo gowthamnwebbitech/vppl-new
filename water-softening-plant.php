@@ -203,6 +203,12 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
                             <div class="service-nav-container">
                                 <?php
                                 $nav_links = [
+                                    // Added these three as requested
+                                    "sewage-treatment-plant.php" => "Sewage Treatment Plant (STP)",
+                                    "effluent-treatment-plant.php" => "Effluent Treatment Plant (ETP)",
+                                    "core-products.php" => "Core Products",
+
+                                    // Existing links
                                     "service-single.php" => "Water Treatment Plant",
                                     "reverse-osmosis-plant.php" => "Reverse Osmosis Plant",
                                     "water-softening-plant.php" => "Water Softening Plant",
@@ -212,7 +218,6 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
                                     "demineralization-plant.php" => "Demineralization Plant",
                                     "hydro-pneumatic-system-pumps.php" => "Hydro Pneumatic Pumps"
                                 ];
-
                                 foreach ($nav_links as $url => $label) {
                                     $active = (basename($_SERVER['PHP_SELF']) == $url) ? 'active' : '';
                                     echo "<a href='$url' class='service-nav-item $active'>$label</a>";
@@ -278,9 +283,11 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
                                         Corrosion-resistant FRP / MSRL Tanks</li>
                                     <li class="mb-2"><i class="fa fa-check-circle  me-2"></i>
                                         <strong>Automation:</strong> Manual, Semi-Auto, or Fully Automatic Multiport
-                                        Valves</li>
+                                        Valves
+                                    </li>
                                     <li class="mb-2"><i class="fa fa-check-circle  me-2"></i>
-                                        <strong>Technology:</strong> High-Efficiency Cation Resin Exchange</li>
+                                        <strong>Technology:</strong> High-Efficiency Cation Resin Exchange
+                                    </li>
                                     <li><i class="fa fa-check-circle  me-2"></i> <strong>Regeneration:</strong> External
                                         Brine Tank for easy salt charging</li>
                                 </ul>

@@ -2285,6 +2285,7 @@ body {
     .vppl-has-dropdown.vppl-active .dropdown-icon {
         transform: rotate(180deg);
         transition: 0.3s;
+        color: #ffffff;
     }
 
     /* Mobile Footer */

@@ -231,33 +231,30 @@ $hero_main_text = "Mineral <span class='vppl-gradient-text'>Water Treatment</spa
                     <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
-                            <div class="service-nav-card">
-                                <a href="service-single.php" class="service-link">Water Treatment Plant</a>
-                                <a href="reverse-osmosis-plant.php" class="service-link">Reverse Osmosis Plant</a>
-                                <a href="water-softening-plant.php" class="service-link">Water Softening Plant</a>
-                                <a href="ultra-filtration-plant.php" class="service-link">Ultra Filtration Plant</a>
-                                <a href="iron-removal-plant.php" class="service-link">Iron Removal Plant</a>
-                                <a href="mineral-water-treatment-plant.php" class="service-link active">Mineral Water
-                                    Plant</a>
-                                <a href="demineralization-plant.php" class="service-link">Demineralization Plant</a>
-                                <a href="hydro-pneumatic-system-pumps.php" class="service-link">Hydro Pneumatic
-                                    Pumps</a>
+    <div class="service-nav-card">
+        <a href="sewage-treatment-plant.php" class="service-link <?php echo ($page_title == 'Sewage Treatment Plant') ? 'active' : ''; ?>">Sewage Treatment Plant (STP)</a>
+        <a href="effluent-treatment-plant.php" class="service-link <?php echo ($page_title == 'Effluent Treatment Plant') ? 'active' : ''; ?>">Effluent Treatment Plant (ETP)</a>
+        <a href="core-products.php" class="service-link <?php echo ($page_title == 'Core Products') ? 'active' : ''; ?>">Core Products</a>
+        
+        <a href="service-single.php" class="service-link <?php echo ($page_title == 'Water Treatment Plant') ? 'active' : ''; ?>">Water Treatment Plant</a>
+        <a href="reverse-osmosis-plant.php" class="service-link <?php echo ($page_title == 'Reverse Osmosis Plant') ? 'active' : ''; ?>">Reverse Osmosis Plant</a>
+        <a href="water-softening-plant.php" class="service-link <?php echo ($page_title == 'Water Softening Plant') ? 'active' : ''; ?>">Water Softening Plant</a>
+        <a href="ultra-filtration-plant.php" class="service-link <?php echo ($page_title == 'Ultra Filtration Plant') ? 'active' : ''; ?>">Ultra Filtration Plant</a>
+        <a href="iron-removal-plant.php" class="service-link <?php echo ($page_title == 'Iron Removal Plant') ? 'active' : ''; ?>">Iron Removal Plant</a>
+        <a href="mineral-water-treatment-plant.php" class="service-link <?php echo ($page_title == 'Mineral Water Plant') ? 'active' : ''; ?>">Mineral Water Plant</a>
+        <a href="demineralization-plant.php" class="service-link <?php echo ($page_title == 'Demineralization Plant') ? 'active' : ''; ?>">Demineralization Plant</a>
+        <a href="hydro-pneumatic-system-pumps.php" class="service-link <?php echo ($page_title == 'Hydro Pneumatic Pumps') ? 'active' : ''; ?>">Hydro Pneumatic Pumps</a>
 
-                                <div class="vppl-cta-box">
-                                    <h6 class="text-uppercase mb-2"
-                                        style="letter-spacing: 2px; color: var(--vppl-accent);">Expert Advice</h6>
-                                    <p class="small opacity-75">Consult with our technical engineers for plant setup.
-                                    </p>
-                                    <a href="tel:+919943835148"
-                                        class="text-white fw-bold d-block mb-2 text-decoration-none">
-                                        <i class="fa fa-phone me-2"></i> +91 99438 35148
-                                    </a>
-                                    <a href="mailto:venkadavanprojectschennai@gmail.com"
-                                        class="btn-main w-100 py-2 mt-2 text-center"
-                                        style="font-size: 12px; border-radius: 5px;">Enquire Now</a>
-                                </div>
-                            </div>
-                        </div>
+        <div class="vppl-cta-box">
+            <h6 class="text-uppercase mb-2" style="letter-spacing: 2px; color: var(--vppl-accent);">Need Help?</h6>
+            <p class="small opacity-75">Contact our technical team for custom plant design.</p>
+            <a href="tel:+919943835148" class="text-white fw-bold d-block mb-2 text-decoration-none">
+                <i class="fa fa-phone me-2"></i> +91 99438 35148
+            </a>
+            <a href="mailto:venkadavanprojectschennai@gmail.com" class="btn-main w-100 py-2 mt-2 text-center" style="font-size: 12px;">Enquire Now</a>
+        </div>
+    </div>
+</div>
 
                         <div class="col-lg-9">
                             <div class="row g-4 mb-5 align-items-center">

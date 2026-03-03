@@ -1,21 +1,19 @@
 <?php
 // 1. DYNAMIC CONFIGURATION
-$page_title = "Reverse Osmosis Plant";
-$parent_page = "Projects";
+$page_title = "Core Products";
+$parent_page = "Our Portfolio";
 $hero_bg = "sub-banner.webp";
-$hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant";
+$hero_main_text = "Our <span class='vppl-gradient-text'>Core</span> Products";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <?php include 'headerlink.php'; ?>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
     <style>
-        /* --- VPPL UNIFIED DESIGN SYSTEM --- */
+        /* (Uses the same CSS as ETP page for consistency) */
         :root {
             --vppl-primary: #22a4d4;
             --vppl-secondary: #0a2d4d;
@@ -30,13 +28,11 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
         body {
             background-color: var(--vppl-white);
             color: var(--vppl-secondary);
-            overflow-x: hidden;
         }
 
-        /* --- Dynamic Hero --- */
         .vppl-hero {
             height: 45vh;
-            min-height: 380px;
+            min-height: 350px;
             background-position: center;
             background-size: cover;
             position: relative;
@@ -46,8 +42,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
         }
 
         .vppl-hero-overlay {
-                        overflow: hidden;
-
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9), rgba(10, 45, 77, 0.4));
@@ -70,7 +64,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             list-style: none;
             font-size: 13px;
             color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .vppl-breadcrumb li a {
@@ -92,7 +85,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             font-weight: 800;
             text-transform: uppercase;
             color: #fff;
-            margin-top: 15px;
         }
 
         .vppl-gradient-text {
@@ -101,7 +93,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             -webkit-text-fill-color: transparent;
         }
 
-        /* --- Sidebar Navigation --- */
         .service-nav-card {
             background: var(--vppl-light-bg);
             border-radius: 15px;
@@ -122,7 +113,7 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
-            border: 1px solid #edf2f7;
+            border: 1px solid transparent;
         }
 
         .service-link:hover,
@@ -132,10 +123,8 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             border-left: 4px solid var(--vppl-accent);
             transform: translateX(5px);
             box-shadow: 0 5px 15px rgba(10, 45, 77, 0.1);
-            border-color: transparent;
         }
 
-        /* --- Advantage Grid --- */
         .advantage-card {
             background: #fff;
             border: 1px solid #e2e8f0;
@@ -144,7 +133,7 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             height: 100%;
             transition: var(--transition);
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 15px;
         }
 
@@ -156,46 +145,37 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
 
         .advantage-card i {
             color: var(--vppl-primary);
-            font-size: 22px;
+            font-size: 20px;
+            margin-top: 4px;
         }
 
         .advantage-card h5 {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
             margin: 0;
             line-height: 1.4;
             color: var(--vppl-secondary);
         }
 
-        /* --- Action Boxes --- */
         .vppl-cta-box {
             background: var(--vppl-secondary);
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             color: #fff;
-            margin-top: 20px;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
         }
 
         .serv-img {
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
-            width: 100%;
         }
 
         @media (max-width: 991px) {
             .mobile-reverse {
                 flex-direction: column-reverse;
-            }
-
-            .vppl-hero {
-                height: 35vh;
-                clip-path: none;
-                text-align: center;
-            }
-
-            .vppl-breadcrumb {
-                justify-content: center;
             }
 
             .service-nav-card {
@@ -228,7 +208,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             <section class="bg-white">
                 <div class="container py-5">
                     <div class="row g-0 g-lg-5 mobile-reverse">
-
                         <div class="col-lg-3">
     <div class="service-nav-card">
         <a href="sewage-treatment-plant.php" class="service-link <?php echo ($page_title == 'Sewage Treatment Plant') ? 'active' : ''; ?>">Sewage Treatment Plant (STP)</a>
@@ -256,62 +235,57 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
 </div>
 
                         <div class="col-lg-9">
-                            <div class="row g-4 mb-5 align-items-center">
+                            <div class="row g-4 mb-5">
                                 <div class="col-lg-7">
-                                    <h2 class="fw-bold mb-4">Precision Filtration with <span
-                                            class="vppl-gradient-text">RO Technology</span></h2>
-                                    <p>VPPL is a premier manufacturer of high-performance Reverse Osmosis (RO) plants.
-                                        For over 15 years, we have engineered compact and efficient RO systems for
-                                        homes, apartments, institutions, and industrial organizations.</p>
-                                    <p>Our RO plants utilize high-pressure pumps and semi-permeable membranes to remove
-                                        dissolved impurities, ensuring that even the most brackish groundwater is
-                                        converted into pure, safe water.</p>
+                                    <h2 class="fw-bold mb-4">Precision <span
+                                            class="vppl-gradient-text">Components</span></h2>
+                                    <p class="lead text-dark">High-performance spares and accessories for every water
+                                        treatment need.</p>
+                                    <p>VPPL supplies high-grade industrial components sourced from global leaders.
+                                        Whether you need replacements for an existing plant or parts for a new setup,
+                                        our inventory includes everything from RO membranes and pressure vessels to
+                                        precision control valves and chemical dosing systems.</p>
                                 </div>
-
                                 <div class="col-lg-5">
-                                    <img src="images/reverse-osmosis-plant.webp" class="img-fluid serv-img"
-                                        alt="Reverse Osmosis Plant">
+                                    <img src="images/water-treatment-plant.webp" class="img-fluid serv-img"
+                                        alt="Water Treatment Products">
                                 </div>
                             </div>
 
                             <div class="row g-4 mb-5">
                                 <div class="col-12">
-                                    <h3 class="fw-bold">Why Choose Our RO Systems?</h3>
-                                    <hr style="width: 50px; border-top: 3px solid var(--vppl-primary);">
+                                    <h3 class="fw-bold mb-4">Product Inventory</h3>
                                 </div>
-
                                 <?php
                                 $advantages = [
-                                    "97% Removal of Dissolved Solids",
-                                    "Chemical-Free Bio-nitrification",
-                                    "Advanced Oxidation Process",
-                                    "Biological Phosphorus Removal",
-                                    "Efficient Solid-Liquid Separation",
-                                    "Total Organic Matter Elimination",
-                                    "Highly Cost-Effective Operation",
-                                    "Low Maintenance Design",
-                                    "Fully Independent Modular System"
+                                    "High-Flux RO Membranes",
+                                    "FRP Pressure Vessels",
+                                    "Automatic Control Valves",
+                                    "Dosing Pumps & Mixers",
+                                    "UV Sterilizer Systems",
+                                    "Filter Sand & Carbon Media",
+                                    "Ion Exchange Resins",
+                                    "Flow Meters & Sensors",
+                                    "Bag Filters & Housings"
                                 ];
                                 foreach ($advantages as $adv): ?>
                                     <div class="col-md-4">
                                         <div class="advantage-card">
-                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-box-open"></i>
                                             <h5><?php echo $adv; ?></h5>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
 
-                            <div class="p-4 p-md-5 rounded-20px"
+                            <div class="p-5 rounded-20px"
                                 style="background: var(--vppl-light-bg); border: 1px solid #e2e8f0;">
-                                <h4 class="fw-bold">Water Solutions in Coimbatore</h4>
-                                <p>Whether you need a Domestic Hard Water Treatment plant for a single villa or a
-                                    massive Industrial RO setup, VPPL delivers excellence. We focus on seamless
-                                    integration, high-quality water recovery, and cost-effective management to ensure
-                                    100% client satisfaction.</p>
+                                <h4 class="fw-bold">Ready-to-Ship Inventory in Coimbatore</h4>
+                                <p>We maintain a robust stock of essential spares to ensure minimal downtime for our
+                                    clients. All products are tested for high-pressure durability and chemical
+                                    resistance, ensuring they withstand the most demanding industrial environments.</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -319,13 +293,9 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
 
         <?php include 'footer.php'; ?>
     </div>
-
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
-    <script>
-        // Hero Entrance Animation
-        gsap.to(".vppl-hero-content", { opacity: 1, y: 0, duration: 1, ease: "power2.out" });
-    </script>
+    <script>gsap.to(".vppl-hero-content", { opacity: 1, y: 0, duration: 1, ease: "power2.out" });</script>
 </body>
 
 </html>
