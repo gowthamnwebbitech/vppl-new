@@ -1,7 +1,7 @@
 <?php
 // 1. DYNAMIC CONFIGURATION - Powers the Hero and breadcrumbs
 $page_title = "Water Softening Plant";
-$parent_page = "Products & Projects";
+$parent_page = "Projects";
 $hero_bg_image = "sub-banner.webp"; // Using your existing banner name
 $hero_main_title = "Advanced Ion";
 $hero_highlight_title = "Exchange Softening";
@@ -39,6 +39,7 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
 
         .vppl-dynamic-hero::before {
             content: '';
+            overflow: hidden;
             position: absolute;
             inset: 0;
             background: linear-gradient(90deg, rgba(10, 45, 77, 0.95) 0%, rgba(10, 45, 77, 0.7) 50%, rgba(10, 45, 77, 0.2) 100%);
@@ -70,7 +71,7 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
         }
 
         .vppl-breadcrumb-pills li {
-            font-size: 14px;
+            font-size: 12px;
             color: #fff;
         }
 
@@ -196,7 +197,7 @@ $hero_tagline = "Protect your plumbing, appliances, and skin by eliminating calc
 
             <section class="bg-white">
                 <div class="container py-5">
-                    <div class="row g-5 mobile-reverse">
+                    <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
                             <div class="service-nav-container">

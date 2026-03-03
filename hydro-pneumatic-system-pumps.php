@@ -3,7 +3,7 @@
  * Change these values to reuse this template for other service pages
  */
 $page_title = "Hydro Pneumatic System Pumps";
-$parent_page = "Product & Projects";
+$parent_page = "Projects";
 $hero_bg_image = "sub-banner.webp"; // Background image from your images folder
 $hero_main_title = "Hydro Pneumatic <span class='vppl-gradient-text'>System Pumps</span>";
 ?>
@@ -49,6 +49,8 @@ $hero_main_title = "Hydro Pneumatic <span class='vppl-gradient-text'>System Pump
 
         .vppl-hero-overlay {
             position: absolute;
+                        overflow: hidden;
+
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.92), rgba(10, 45, 77, 0.5));
             z-index: 1;
@@ -210,7 +212,7 @@ $hero_main_title = "Hydro Pneumatic <span class='vppl-gradient-text'>System Pump
 
 <body>
     <div id="wrapper">
-        <a href="#" id="back-to-top"></a>
+        <a href="javascript:void(0);" id="back-to-top"></a>
 
         <?php include 'header.php'; ?>
 
@@ -236,7 +238,7 @@ $hero_main_title = "Hydro Pneumatic <span class='vppl-gradient-text'>System Pump
 
             <section class="bg-white">
                 <div class="container py-5">
-                    <div class="row g-5 mobile-reverse">
+                    <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
                             <div class="service-nav-card">

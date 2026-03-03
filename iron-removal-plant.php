@@ -1,7 +1,7 @@
 <?php 
 // 1. DYNAMIC CONFIGURATION - This powers the Hero and SEO
 $page_title = "Iron Removal Plant"; 
-$parent_page = "Products & Projects";
+$parent_page = "Projects";
 $hero_bg_image = "iron-removal-banner.webp"; // Ensure this exists in your images folder
 $hero_main_title = "High-Performance";
 $hero_highlight_title = "Iron Removal";
@@ -41,6 +41,7 @@ $hero_tagline = "Eliminating metallic stains, odor, and scale for pure, crystal-
             content: '';
             position: absolute;
             inset: 0;
+            overflow: hidden;
             background: linear-gradient(90deg, rgba(10, 45, 77, 0.95) 0%, rgba(10, 45, 77, 0.7) 50%, rgba(10, 45, 77, 0.2) 100%);
             z-index: 1;
         }

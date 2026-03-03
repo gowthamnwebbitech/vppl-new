@@ -30,7 +30,7 @@ $hero_main_text = "Engineering <span class='vppl-gradient-text'>Sustainable</spa
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background-color: var(--vppl-white); font-family: 'Inter', sans-serif; color: var(--vppl-secondary); line-height: 1.6; overflow-x: hidden; }
+        body { background-color: var(--vppl-white); font-family: 'Plus Jakarta Sans', sans-serif; color: var(--vppl-secondary); line-height: 1.6; overflow-x: hidden; }
         .vppl-container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 25px; }
 
         /* --- Reveal States --- */
@@ -53,6 +53,7 @@ $hero_main_text = "Engineering <span class='vppl-gradient-text'>Sustainable</spa
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9) 20%, rgba(10, 45, 77, 0.2));
             z-index: 1;
+            overflow: hidden;
         }
         .vppl-hero-content { position: relative; z-index: 10; }
 
@@ -202,8 +203,8 @@ $hero_main_text = "Engineering <span class='vppl-gradient-text'>Sustainable</spa
                                 Our commitment to sustainability isn't just a goal—it's our blueprint. From large-scale biogas infrastructure to precision tech, we build for the future.
                             </p>
                             <div class="vppl-btn-group">
-                                <a href="#" class="vppl-btn vppl-btn-primary">View Company Profile</a>
-                                <a href="#" class="vppl-btn vppl-btn-outline">Technical Catalog</a>
+                                <a href="javascript:void(0);" class="vppl-btn vppl-btn-primary">View Company Profile</a>
+                                <a href="javascript:void(0);" class="vppl-btn vppl-btn-outline">Technical Catalog</a>
                             </div>
                         </div>
 

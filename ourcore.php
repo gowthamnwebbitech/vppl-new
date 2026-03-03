@@ -15,7 +15,7 @@
     <section class="aq-hero-section">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5 order-1 order-lg-2">
+                <div class="col-lg-5 order-2 order-lg-2 overflow-hidden">
                     <div class="image-stack">
                         <div class="stats-pill" id="float-pill">
                             <span class="fw-bold "><i class="fas fa-shield-halved me-2"></i>Industrial
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 order-2 order-lg-1">
+                <div class="col-lg-7 order-1 order-lg-1">
                     <div class="pe-lg-5 text-center text-lg-start">
                         <span class="reveal-item text-accent fw-bold small text-uppercase mb-2 d-block">
                             <i class="fas fa-droplet me-2"></i>Innovating for Purity
@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-                        <a href="#" class="btn-main">
+                        <a href="javascript:void(0);" class="btn-main">
                             Explore Solutions <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

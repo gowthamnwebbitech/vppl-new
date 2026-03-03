@@ -43,6 +43,8 @@ $hero_main_text = "Join Our <span class='vppl-gradient-text'>Visionary</span> Te
             clip-path: ellipse(150% 100% at 50% 0%);
         }
         .vppl-hero-overlay {
+                        overflow: hidden;
+
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9) 20%, rgba(10, 45, 77, 0.3));

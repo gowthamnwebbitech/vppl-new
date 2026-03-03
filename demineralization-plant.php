@@ -1,7 +1,7 @@
 <?php
 // 1. DYNAMIC CONFIGURATION
 $page_title = "Demineralization Plant";
-$parent_page = "Product & Projects";
+$parent_page = "Projects";
 $hero_bg = "sub-banner.webp";
 $hero_main_text = "Demineralization <span class='vppl-gradient-text'>Plant</span>";
 ?>
@@ -50,6 +50,8 @@ $hero_main_text = "Demineralization <span class='vppl-gradient-text'>Plant</span
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.85), rgba(10, 45, 77, 0.3));
             z-index: 1;
+                        overflow: hidden;
+
         }
 
         .vppl-hero-content {
@@ -229,7 +231,7 @@ $hero_main_text = "Demineralization <span class='vppl-gradient-text'>Plant</span
 
             <section class="bg-white">
                 <div class="container py-5">
-                    <div class="row g-5 mobile-reverse">
+                    <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
                             <div class="service-nav-card">

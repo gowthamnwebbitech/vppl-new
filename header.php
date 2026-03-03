@@ -10,11 +10,15 @@
 
             <nav>
                 <ul class="vppl-menu-list" id="vppl-mainmenu">
+                    <li class="vppl-mobile-header d-lg-none">
+                        <span>VPPL</span>
+                        <div id="vppl-close-btn" style="font-size: 24px; cursor: pointer;">&times;</div>
+                    </li>
+                    
                     <li><a class="vppl-menu-link" href="index.php">Home</a></li>
                     <li><a class="vppl-menu-link" href="about.php">About Us</a></li>
                     <li class="vppl-has-dropdown">
-                        <a class="vppl-menu-link" href="#">Projects <i class="fa fa-chevron-down ms-1"
-                                style="font-size: 10px;"></i></a>
+                        <a class="vppl-menu-link" href="javascript:void(0);">Projects <i class="fa fa-chevron-down ms-1 dropdown-icon"></i></a>
                         <ul class="vppl-dropdown-box">
                             <li><a href="service-single.php">Water Treatment Plant</a></li>
                             <li><a href="reverse-osmosis-plant.php">Reverse Osmosis Plant</a></li>
@@ -30,11 +34,16 @@
                     <li><a class="vppl-menu-link" href="career.php">Careers</a></li>
                     <li><a class="vppl-menu-link" href="gallery.php">Gallery</a></li>
                     <li><a class="vppl-menu-link" href="contact.php">Contact</a></li>
+
+                    <li class="vppl-mobile-footer d-lg-none">
+                        <span class="d-block mb-2" style="color: #64748b; font-size: 14px;">Have questions?</span>
+                        <a href="tel:+919843514600" class="mobile-cta-btn">Get a Quote</a>
+                    </li>
                 </ul>
             </nav>
 
-            <div class="d-flex align-items-center hidden xl:d-flex">
-                <a href="tel:+919843514600" class="vppl-contact-pill py-3 d-none d-xl-flex align-items-center">
+            <div class="d-flex align-items-center">
+                <a href="tel:+919843514600" class="vppl-contact-pill d-none d-xl-flex">
                     <i class="fas fa-phone-alt"></i>
                     <div class="vppl-contact-num ms-2">
                         <span>Get a Quote</span>
@@ -47,55 +56,54 @@
                     <span></span>
                 </div>
             </div>
-
         </div>
     </div>
 </header>
+<div class="vppl-overlay" id="vppl-overlay"></div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const vpplHeader = document.querySelector(".vppl-navbar");
-        const vpplMobileToggle = document.getElementById("vppl-mobile-toggle");
-        const vpplMenu = document.getElementById("vppl-mainmenu");
-        const vpplDropdownLink = document.querySelector(".vppl-has-dropdown > a");
+    const vpplHeader = document.querySelector(".vppl-navbar");
+    const vpplMobileToggle = document.getElementById("vppl-mobile-toggle");
+    const vpplCloseBtn = document.getElementById("vppl-close-btn");
+    const vpplMenu = document.getElementById("vppl-mainmenu");
+    const vpplOverlay = document.getElementById("vppl-overlay");
+    const vpplDropdownLinks = document.querySelectorAll(".vppl-has-dropdown > a");
 
-        // 1. Sticky Header Effect
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 60) {
-                vpplHeader.classList.add("vppl-sticky");
-            } else {
-                vpplHeader.classList.remove("vppl-sticky");
-            }
-        });
+    function toggleMenu() {
+        const isOpen = vpplMenu.classList.toggle("vppl-open");
+        vpplMobileToggle.classList.toggle("vppl-active");
+        vpplOverlay.classList.toggle("active");
+        
+        // Disable body scroll when open
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    }
 
-        // 2. Mobile Menu Toggle (Off-Canvas)
-        if (vpplMobileToggle) {
-            vpplMobileToggle.addEventListener("click", function () {
-                this.classList.toggle("vppl-active");
-                vpplMenu.classList.toggle("vppl-open");
-                // Lock body scroll when menu is open
-                document.body.style.overflow = vpplMenu.classList.contains("vppl-open") ? "hidden" : "";
-            });
-        }
+    vpplMobileToggle.addEventListener("click", toggleMenu);
+    vpplOverlay.addEventListener("click", toggleMenu);
+    if(vpplCloseBtn) vpplCloseBtn.addEventListener("click", toggleMenu);
 
-        // 3. Mobile Submenu Toggle
-        if (vpplDropdownLink) {
-            vpplDropdownLink.addEventListener("click", function (e) {
-                if (window.innerWidth <= 992) {
-                    e.preventDefault();
-                    this.parentElement.classList.toggle("vppl-active");
-                }
-            });
-        }
-
-        // 4. Resize Cleanup
-        window.addEventListener("resize", function () {
-            if (window.innerWidth > 992) {
-                vpplMenu.classList.remove("vppl-open");
-                vpplMobileToggle.classList.remove("vppl-active");
-                document.body.style.overflow = "";
-                document.querySelectorAll('.vppl-has-dropdown').forEach(el => el.classList.remove('vppl-active'));
+    // Mobile Dropdown Logic
+    vpplDropdownLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (window.innerWidth <= 992) {
+                e.preventDefault();
+                const parent = this.parentElement;
+                parent.classList.toggle("vppl-active");
+                
+                // Close other submenus if one is opened (Accordion style)
+                document.querySelectorAll('.vppl-has-dropdown').forEach(item => {
+                    if (item !== parent) item.classList.remove('vppl-active');
+                });
             }
         });
     });
+
+    // Close menu on resize if moving to desktop
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 992 && vpplMenu.classList.contains("vppl-open")) {
+            toggleMenu();
+        }
+    });
+});
 </script>

@@ -162,7 +162,7 @@
             <div class="row align-items-center g-4">
                 <div class="col-lg-4 order-2 order-lg-1">
                     <div class="reveal-left">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-faucet-drip"></i></div>
                             <div>
                                 <h4>Water Treatment Plant</h4>
@@ -171,7 +171,7 @@
                         </a>
                     </div>
                     <div class="reveal-left">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-droplet-slash"></i></div>
                             <div>
                                 <h4>Waste Water Treatment</h4>
@@ -180,7 +180,7 @@
                         </a>
                     </div>
                     <div class="reveal-left">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-recycle"></i></div>
                             <div>
                                 <h4>Solid Waste Management</h4>
@@ -189,7 +189,7 @@
                         </a>
                     </div>
                     <div class="reveal-left">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-filter"></i></div>
                             <div>
                                 <h4>Iron Removal Solutions</h4>
@@ -214,7 +214,7 @@
 
                 <div class="col-lg-4 order-3">
                     <div class="reveal-right">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                             <div>
                                 <h4>Operation & Maintenance</h4>
@@ -223,7 +223,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-flask-vial"></i></div>
                             <div>
                                 <h4>Chemical Solutions</h4>
@@ -232,7 +232,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-industry"></i></div>
                             <div>
                                 <h4>Demineralization Plant</h4>
@@ -241,7 +241,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="#" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card">
                             <div class="nexus-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
                             <div>
                                 <h4>Hydro Pneumatic Systems</h4>

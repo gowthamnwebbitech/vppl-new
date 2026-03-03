@@ -1,7 +1,7 @@
 <?php
 // 1. DYNAMIC CONFIGURATION
 $page_title = "Reverse Osmosis Plant";
-$parent_page = "Product & Projects";
+$parent_page = "Projects";
 $hero_bg = "sub-banner.webp";
 $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant";
 ?>
@@ -46,6 +46,8 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
         }
 
         .vppl-hero-overlay {
+                        overflow: hidden;
+
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9), rgba(10, 45, 77, 0.4));
@@ -225,7 +227,7 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
 
             <section class="bg-white">
                 <div class="container py-5">
-                    <div class="row g-5 mobile-reverse">
+                    <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
                             <div class="service-nav-card">

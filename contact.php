@@ -47,6 +47,8 @@ $hero_main_text = "Get In <span class='vppl-gradient-text'>Touch</span> With Us"
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9) 20%, rgba(10, 45, 77, 0.3));
             z-index: 1;
+                        overflow: hidden;
+
         }
         .vppl-hero-content { position: relative; z-index: 10; opacity: 0; transform: translateY(30px); }
 

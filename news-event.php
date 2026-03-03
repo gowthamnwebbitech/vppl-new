@@ -50,6 +50,8 @@ $hero_main_text = "Global <span class='vppl-gradient-text'>Updates</span> & Insi
             clip-path: ellipse(150% 100% at 50% 0%);
         }
         .vppl-hero-overlay {
+                        overflow: hidden;
+
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9) 20%, rgba(10, 45, 77, 0.2));
@@ -214,7 +216,7 @@ $hero_main_text = "Global <span class='vppl-gradient-text'>Updates</span> & Insi
                                 <span class="vppl-tag">Event</span>
                                 <h3>ChemTech Global Expo 2026</h3>
                                 <p>Join VPPL as we unveil our latest ultra-filtration technology lineup.</p>
-                                <a href="#" class="btn-link">Details →</a>
+                                <a href="javascript:void(0);" class="btn-link">Details →</a>
                             </div>
                         </div>
 
@@ -227,7 +229,7 @@ $hero_main_text = "Global <span class='vppl-gradient-text'>Updates</span> & Insi
                                 <span class="vppl-tag">Award</span>
                                 <h3>Excellence in Innovation</h3>
                                 <p>Recognized for breakthrough in ceramic membrane technology cycles.</p>
-                                <a href="#" class="btn-link">Read More →</a>
+                                <a href="javascript:void(0);" class="btn-link">Read More →</a>
                             </div>
                         </div>
 
@@ -240,7 +242,7 @@ $hero_main_text = "Global <span class='vppl-gradient-text'>Updates</span> & Insi
                                 <span class="vppl-tag">Project</span>
                                 <h3>Ahmedabad Textile Hub</h3>
                                 <p>Commissioning of a smart-water recovery system for high-volume units.</p>
-                                <a href="#" class="btn-link">Technical →</a>
+                                <a href="javascript:void(0);" class="btn-link">Technical →</a>
                             </div>
                         </div>
 

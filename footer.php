@@ -5,7 +5,7 @@
     <div class="container relative z-2">
         <div class="row gx-5 gy-4">
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                 <div class="vpp-ft-brand-container">
                     <img src="images/vppl.svg" class="vpp-ft-logo" alt="VPPL Logo">
                     <div class="vpp-ft-spacer"></div>
@@ -16,16 +16,16 @@
                     </p>
 
                     <div class="vpp-ft-social-wrap">
-                        <a href="#" class="vpp-ft-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="vpp-ft-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="vpp-ft-social-btn"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="vpp-ft-social-btn"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" class="vpp-ft-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-12 order-lg-1 order-sm-2">
+            <div class="col-lg-4 col-md-12 order-lg-1 order-2 mb-4 mb-lg-0">
                 <div class="row">
                     <div class="col-6">
                         <div class="vpp-ft-widget">
@@ -56,18 +56,18 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-12 order-lg-2 order-sm-1">
+            <div class="col-lg-4 col-md-12 order-lg-2 order-1">
                 <div class="vpp-ft-contact-card">
-                    <div class="vpp-ft-contact-row">
+                    <div class="vpp-ft-contact-row mb-4">
                         <div class="vpp-ft-icon-box"><i class="fa-solid fa-location-dot"></i></div>
                         <div>
                             <div class="vpp-ft-contact-label">Office Location</div>
                             <p class="vpp-ft-contact-text">No.2, Flat 3, Gflr, Janakaraj Street, Devaraj Nagar,
-                                Sligramam, Chennai - 600093.</p>
+                                Saligramam, Chennai - 600093.</p>
                         </div>
                     </div>
 
-                    <div class="vpp-ft-contact-row">
+                    <div class="vpp-ft-contact-row mb-4">
                         <div class="vpp-ft-icon-box"><i class="fa-solid fa-phone-volume"></i></div>
                         <div>
                             <div class="vpp-ft-contact-label">Call Us Directly</div>
@@ -79,8 +79,7 @@
                         <div class="vpp-ft-icon-box"><i class="fa-solid fa-envelope-open-text"></i></div>
                         <div>
                             <div class="vpp-ft-contact-label">Send a Message</div>
-                            <a href="mailto:venkadavanprojectschennai@gmail.com" class="vpp-ft-contact-anchor">Email
-                                Support</a>
+                            <a href="mailto:venkadavanprojectschennai@gmail.com" class="vpp-ft-contact-anchor">Email Support</a>
                         </div>
                     </div>
                 </div>
@@ -90,15 +89,19 @@
 
     <div class="vpp-ft-bottom-bar">
         <div class="container">
-            <div class="vpp-ft-bottom-flex">
-                <div class="vpp-ft-copyright">
-                    &copy; 2026 <strong class="vpp-ft-white">VPPL</strong> | Designed By <a class="vpp-ft-designer"
-                        href="https://webbitech.com/">Webbitech</a>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="vpp-ft-copyright">
+                        &copy; 2026 <strong class="vpp-ft-white">VPPL</strong> | Designed By <a class="vpp-ft-designer"
+                            href="https://webbitech.com/">Webbitech</a>
+                    </div>
                 </div>
-                <ul class="vpp-ft-legal-links">
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="vpp-ft-legal-links d-inline-flex justify-content-center justify-content-md-end">
+                        <li><a href="javascript:void(0);">Terms & Conditions</a></li>
+                        <li class="ms-3"><a href="javascript:void(0);">Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

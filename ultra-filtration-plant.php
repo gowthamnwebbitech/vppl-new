@@ -1,7 +1,7 @@
 <?php
 // 1. DYNAMIC CONFIGURATION FOR ULTRA FILTRATION PAGE
 $page_title = "Ultra Filtration Plant";
-$parent_page = "Product & Projects";
+$parent_page = "Projects";
 $hero_bg = "sub-banner.webp";
 $hero_main_text = "Ultra <span class='vppl-gradient-text'>Filtration</span> Plant";
 ?>
@@ -45,6 +45,8 @@ $hero_main_text = "Ultra <span class='vppl-gradient-text'>Filtration</span> Plan
         }
 
         .vppl-hero-overlay {
+                        overflow: hidden;
+
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.9), rgba(10, 45, 77, 0.4));
@@ -230,7 +232,7 @@ $hero_main_text = "Ultra <span class='vppl-gradient-text'>Filtration</span> Plan
 
             <section class="bg-white">
                 <div class="container py-5">
-                    <div class="row g-5 mobile-reverse">
+                    <div class="row g-0 g-lg-5 mobile-reverse">
 
                         <div class="col-lg-3">
                             <div class="service-nav-card">
