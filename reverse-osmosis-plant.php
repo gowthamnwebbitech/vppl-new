@@ -175,6 +175,18 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
             color: #fff;
             margin-top: 20px;
         }
+               .vppl-cta-box::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--vppl-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
 
         .serv-img {
             border-radius: 20px;
@@ -247,9 +259,6 @@ $hero_main_text = "Reverse <span class='vppl-gradient-text'>Osmosis</span> Plant
         <div class="vppl-cta-box">
             <h6 class="text-uppercase mb-2" style="letter-spacing: 2px; color: var(--vppl-accent);">Need Help?</h6>
             <p class="small opacity-75">Contact our technical team for custom plant design.</p>
-            <a href="tel:+919943835148" class="text-white fw-bold d-block mb-2 text-decoration-none">
-                <i class="fa fa-phone me-2"></i> +91 99438 35148
-            </a>
             <a href="mailto:venkadavanprojectschennai@gmail.com" class="btn-main w-100 py-2 mt-2 text-center" style="font-size: 12px;">Enquire Now</a>
         </div>
     </div>

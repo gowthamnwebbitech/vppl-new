@@ -7,7 +7,9 @@
 
             <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
                 <div class="vpp-ft-brand-container">
-                    <img src="images/vppl.svg" class="vpp-ft-logo" alt="VPPL Logo">
+                    <a href="index.php" class="vpp-ft-logo-link">
+                        <img src="images/vppl.svg" class="vpp-ft-logo" alt="VPPL Logo">
+                    </a>
                     <div class="vpp-ft-spacer"></div>
                     <p class="vpp-ft-description">
                         Transform your water and wastewater systems with VPPL’s expert treatment solutions. From system
@@ -16,11 +18,15 @@
                     </p>
 
                     <div class="vpp-ft-social-wrap">
-                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i
+                                class="fa-brands fa-instagram"></i></a>
                         <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="javascript:void(0);" class="vpp-ft-social-btn"><i
+                                class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -33,7 +39,6 @@
                             <ul class="vpp-ft-link-list">
                                 <li><a href="index.php">Home</a></li>
                                 <li><a href="about.php">About Us</a></li>
-                                <li><a href="service-single.php">Projects</a></li>
                                 <li><a href="career.php">Career</a></li>
                                 <li><a href="news-event.php">News & Event</a></li>
                                 <li><a href="gallery.php">Gallery</a></li>
@@ -42,9 +47,9 @@
                     </div>
                     <div class="col-6">
                         <div class="vpp-ft-widget">
-                            <h5 class="vpp-ft-widget-title">Services</h5>
+                            <h5 class="vpp-ft-widget-title">Projects</h5>
                             <ul class="vpp-ft-link-list">
-                                <li><a href="water-treatment-plant.php">Water Treatment</a></li>
+                                <li><a href="mineral-water-treatment-plant.php">Water Treatment</a></li>
                                 <li><a href="reverse-osmosis-plant.php">RO Plant</a></li>
                                 <li><a href="water-softening-plant.php">Softening Plant</a></li>
                                 <li><a href="ultra-filtration-plant.php">Ultra Filtration</a></li>
@@ -79,7 +84,8 @@
                         <div class="vpp-ft-icon-box"><i class="fa-solid fa-envelope-open-text"></i></div>
                         <div>
                             <div class="vpp-ft-contact-label">Send a Message</div>
-                            <a href="mailto:venkadavanprojectschennai@gmail.com" class="vpp-ft-contact-anchor">Email Support</a>
+                            <a href="mailto:venkadavanprojectschennai@gmail.com" class="vpp-ft-contact-anchor">Email
+                                Support</a>
                         </div>
                     </div>
                 </div>
@@ -92,8 +98,9 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <div class="vpp-ft-copyright">
-                        &copy; 2026 <strong class="vpp-ft-white">VPPL</strong> | Designed By <a class="vpp-ft-designer"
-                            href="https://webbitech.com/">Webbitech</a>
+                        &copy; 2026 <strong class="vpp-ft-white">VPPL</strong> <span class="d-none">
+                            | Designed By <a class="vpp-ft-designer" href="https://webbitech.com/">Webbitech</a>
+                        </span>
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-md-end">

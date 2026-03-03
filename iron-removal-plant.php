@@ -5,7 +5,7 @@ $parent_page = "Projects";
 $hero_bg_image = "sub-banner.webp"; // Ensure this exists in your images folder
 $hero_main_title = "High-Performance";
 $hero_highlight_title = "Iron Removal";
-$hero_tagline = "Eliminating metallic stains, odor, and scale for pure, crystal-clear water.";
+$hero_tagline = "";
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -164,6 +164,30 @@ $hero_tagline = "Eliminating metallic stains, odor, and scale for pure, crystal-
                 flex-direction: column-reverse;
             }
         }
+
+
+        /* --- Action Section --- */
+        .vppl-cta-box {
+            background: var(--vppl-secondary);
+            border-radius: 15px;
+            padding: 30px;
+            color: #fff;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vppl-cta-box::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            bottom: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--vppl-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
     </style>
 </head>
 
@@ -224,11 +248,13 @@ $hero_tagline = "Eliminating metallic stains, odor, and scale for pure, crystal-
                                 }
                                 ?>
 
-                                <div class="mt-5 p-4 rounded-20px text-white" style="background: var(--vppl-grad);">
-                                    <i class="fa fa-headset fs-1 mb-3 opacity-50"></i>
-                                    <h6>Technical Support?</h6>
-                                    <p class="small opacity-75">Talk to our experts for custom plant designs.</p>
-                                    <a href="tel:+919943835148" class="btn btn-light btn-sm w-100 fw-bold py-2">Call
+
+                                <div class="vppl-cta-box">
+                                    <h6 class="text-uppercase mb-2"
+                                        style="letter-spacing: 2px; color: var(--vppl-accent);">Need Help?</h6>
+                                    <p class="small opacity-75">Contact our technical team for custom plant design.</p>
+                                    <a href="mailto:venkadavanprojectschennai@gmail.com"
+                                        class="btn-main w-100 py-2 mt-2 text-center" style="font-size: 12px;">Enquire
                                         Now</a>
                                 </div>
                             </div>
@@ -282,9 +308,9 @@ $hero_tagline = "Eliminating metallic stains, odor, and scale for pure, crystal-
                             <div class="p-5 rounded-20px text-center"
                                 style="background: #f1f5f9; border: 2px dashed #cbd5e1;">
                                 <h3 class="fw-bold">Ready to solve your water problems?</h3>
-                                <p>We provide free site visits and water testing analysis.</p>
-                                <a href="contact.php" class="btn btn-primary px-5 py-3 rounded-pill fw-bold"
-                                    style="background: var(--vppl-grad); border:none;">Get A Free Quote</a>
+                                <p class="pb-3">We provide free site visits and water testing analysis.</p>
+                                <a href="contact.php" class="px-5 py-3 rounded-pill fw-bold text-white mt-2"
+                                    style="background: var(--vppl-grad); border:none; text-decoration: none;">Get A Free Quote</a>
                             </div>
                         </div>
 

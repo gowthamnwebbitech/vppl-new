@@ -62,7 +62,7 @@
                             </div>
                         </div>
 
-                        <a href="javascript:void(0);" class="btn-main">
+                        <a href="service-single.php" class="btn-main">
                             Explore Solutions <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

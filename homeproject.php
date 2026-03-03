@@ -5,40 +5,61 @@
         <div class="aqua-header">
             <span class="aqua-badge">Excellence in Engineering</span>
             <h1 class="aqua-main-title">Water Solutions</h1>
-            <p class="aqua-desc">Advanced engineering for high-purity water treatment and sustainable industrial systems.</p>
+            <p class="aqua-desc">Advanced engineering for high-purity water treatment and sustainable industrial
+                systems.</p>
         </div>
 
         <div class="aqua-grid">
             <?php
             $items = [
-                ['title' => 'Water Treatment Plant', 'sub' => 'WTP Systems', 'text' => 'High-capacity physical and chemical purification for community and industry.', 'tag' => 'Potable'],
-                ['title' => 'Reverse Osmosis', 'sub' => 'RO Membrane', 'text' => 'Advanced desalination removing salts and microscopic impurities with precision.', 'tag' => 'Ultra Pure'],
-                ['title' => 'Water Softening', 'sub' => 'Ion-Exchange', 'text' => 'Removing calcium and magnesium to prevent scaling in pipelines and boilers.', 'tag' => 'Scale-Free'],
-                ['title' => 'Ultra Filtration', 'sub' => 'UF Systems', 'text' => 'Pressure-driven membrane process to remove suspended solids and bacteria.', 'tag' => '0.01 Micron'],
-                ['title' => 'Iron Removal Plant', 'sub' => 'Oxidation', 'text' => 'Specialized media filters to eliminate iron and manganese from borewell water.', 'tag' => 'Clear Water'],
-                ['title' => 'Mineral Water Plant', 'sub' => 'Turnkey', 'text' => 'Automatic production lines for bottled water with ozonation systems.', 'tag' => 'Commercial'],
-                ['title' => 'Demineralization', 'sub' => 'DM Units', 'text' => 'Dual-bed and mixed-bed ion exchange for high-purity industrial process water.', 'tag' => 'Deionized'],
-                ['title' => 'Hydro Pneumatic', 'sub' => 'Pump Systems', 'text' => 'Energy-efficient pressure boosting systems for constant water supply.', 'tag' => 'Constant PSI']
+                ['title' => 'Water Treatment Plant', 'sub' => 'WTP Systems', 'text' => 'High-capacity physical and chemical purification for community and industry.', 'tag' => 'Potable', 'url' => 'service-single.php'],
+                ['title' => 'Reverse Osmosis', 'sub' => 'RO Membrane', 'text' => 'Advanced desalination removing salts and microscopic impurities with precision.', 'tag' => 'Ultra Pure', 'url' => 'reverse-osmosis-plant.php'],
+                ['title' => 'Water Softening', 'sub' => 'Ion-Exchange', 'text' => 'Removing calcium and magnesium to prevent scaling in pipelines and boilers.', 'tag' => 'Scale-Free', 'url' => 'water-softening-plant.php'],
+                ['title' => 'Ultra Filtration', 'sub' => 'UF Systems', 'text' => 'Pressure-driven membrane process to remove suspended solids and bacteria.', 'tag' => '0.01 Micron', 'url' => 'ultra-filtration-plant.php'],
+                ['title' => 'Iron Removal Plant', 'sub' => 'Oxidation', 'text' => 'Specialized media filters to eliminate iron and manganese from borewell water.', 'tag' => 'Clear Water', 'url' => 'iron-removal-plant.php'],
+                ['title' => 'Mineral Water Plant', 'sub' => 'Turnkey', 'text' => 'Automatic production lines for bottled water with ozonation systems.', 'tag' => 'Commercial', 'url' => 'mineral-water-treatment-plant.php'],
+
+                // Extra Items (Hidden by default)
+                ['title' => 'Demineralization', 'sub' => 'DM Units', 'text' => 'Dual-bed and mixed-bed ion exchange for high-purity industrial process water.', 'tag' => 'Deionized', 'url' => 'demineralization-plant.php'],
+                ['title' => 'Hydro Pneumatic', 'sub' => 'Pump Systems', 'text' => 'Energy-efficient pressure boosting systems for constant water supply.', 'tag' => 'Constant PSI', 'url' => 'hydro-pneumatic-system-pumps.php']
             ];
 
-            foreach ($items as $item): ?>
-            <div class="aqua-card">
-                <div>
-                    <span class="aqua-card-sub"><?= $item['sub'] ?></span>
-                    <h3 class="aqua-card-title"><?= $item['title'] ?></h3>
-                    <p class="aqua-card-text"><?= $item['text'] ?></p>
+            foreach ($items as $index => $item):
+                $isHidden = ($index >= 6) ? 'aqua-card-extra d-none' : '';
+                ?>
+                <div class="aqua-card <?= $isHidden ?>">
+                    <div class="aqua-card-body">
+                        <span class="aqua-card-sub"><?= $item['sub'] ?></span>
+                        <h3 class="aqua-card-title"><?= $item['title'] ?></h3>
+                        <p class="aqua-card-text"><?= $item['text'] ?></p>
+                    </div>
+
+                    <div class="aqua-card-footer">
+                        <span class="aqua-tag"><?= $item['tag'] ?></span>
+                        <a href="<?= $item['url'] ?>" class="aqua-btn">
+                            Details
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14m-7-7 7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                
-                <div class="aqua-card-footer">
-                    <span class="aqua-tag"><?= $item['tag'] ?></span>
-                    <button class="aqua-btn">
-                        Details 
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-                    </button>
-                </div>
-            </div>
             <?php endforeach; ?>
         </div>
+
+        <?php if (count($items) > 6): ?>
+            <div class="aqua-actions">
+                <a href="service-single.php" id="view-more-btn" class="aqua-view-more">
+                    View More Systems
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="ms-2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </a>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
 
@@ -80,7 +101,7 @@
             if (mouse.x) {
                 let dx = this.x - mouse.x;
                 let dy = this.y - mouse.y;
-                let dist = Math.sqrt(dx*dx + dy*dy);
+                let dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < 120) {
                     this.x += dx / 20;
                     this.y += dy / 20;
@@ -96,7 +117,7 @@
             ctx.fill();
             // Reflection highlight on bubble
             ctx.beginPath();
-            ctx.arc(this.x - this.size*0.3, this.y - this.size*0.3, this.size*0.2, 0, Math.PI * 2);
+            ctx.arc(this.x - this.size * 0.3, this.y - this.size * 0.3, this.size * 0.2, 0, Math.PI * 2);
             ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity + 0.2})`;
             ctx.fill();
         }
@@ -111,11 +132,11 @@
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         // Drawing a very subtle "water wave" at the bottom
         ctx.beginPath();
         ctx.moveTo(0, canvas.height);
-        for(let i = 0; i <= canvas.width; i += 20) {
+        for (let i = 0; i <= canvas.width; i += 20) {
             ctx.lineTo(i, canvas.height - 20 + Math.sin(i * 0.01 + Date.now() * 0.002) * 10);
         }
         ctx.lineTo(canvas.width, canvas.height);

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VPPL | Engineering Excellence</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -19,10 +21,21 @@
         }
 
         /* Essential for Smooth Scroll (Lenis) */
-        html.lenis { height: auto; }
-        .lenis-smooth { scroll-behavior: auto !important; }
-        .lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-        .lenis-stopped { overflow: hidden; }
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis-stopped {
+            overflow: hidden;
+        }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -31,7 +44,8 @@
             overflow-x: hidden;
             line-height: 1.6;
         }
-        .vppl-dark{
+
+        .vppl-dark {
             color: var(--vppl-dark);
         }
 
@@ -57,9 +71,10 @@
             display: block;
         }
 
-        .nexus-head-color{
+        .nexus-head-color {
             color: var(--vppl-primary);
         }
+
         /* --- Feature Cards --- */
         .nexus-card {
             background: var(--vppl-card-bg);
@@ -115,8 +130,13 @@
             transition: color 0.3s;
         }
 
-        .nexus-card:hover h4 { color: var(--vppl-dark); }
-        .nexus-card:hover p { color: var(--vppl-muted); }
+        .nexus-card:hover h4 {
+            color: var(--vppl-dark);
+        }
+
+        .nexus-card:hover p {
+            color: var(--vppl-muted);
+        }
 
         /* --- Floating UI --- */
         .floating-badge {
@@ -126,7 +146,7 @@
             background: var(--white);
             padding: 12px 24px;
             border-radius: 50px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             gap: 12px;
@@ -143,26 +163,43 @@
         }
 
         @media (max-width: 991px) {
-            .main-eng-img { height: 450px; }
-            .vppl-nexus-portal { padding: 60px 0; }
-            .floating-badge { left: 10px; top: 10px; }
+            .main-eng-img {
+                height: 450px;
+            }
+
+            .vppl-nexus-portal {
+                padding: 60px 0;
+            }
+
+            .floating-badge {
+                left: 10px;
+                top: 10px;
+            }
+        }
+
+        .normal-cursor {
+            cursor: default !important;
         }
     </style>
 </head>
+
 <body>
 
     <section class="vppl-nexus-portal">
         <div class="container">
             <div class="text-center mb-5" id="headerContent" style="opacity: 0;">
-                <h6 class=" fw-bold text-uppercase nexus-head-color mb-2" style="letter-spacing: 3px;">Technical Prowess</h6>
-                <h2 class="fw-bold display-5 text-black mb-3 vppl-dark">Our Core <span class="nexus-head-color">Capabilities</span></h2>
-                <p class="text-muted fs-5">Engineering tailored high-performance water and waste management solutions.</p>
+                <h6 class=" fw-bold text-uppercase nexus-head-color mb-2" style="letter-spacing: 3px;">Technical Prowess
+                </h6>
+                <h2 class="fw-bold display-5 text-black mb-3 vppl-dark">Our Core <span
+                        class="nexus-head-color">Capabilities</span></h2>
+                <p class="text-muted fs-5">Engineering tailored high-performance water and waste management solutions.
+                </p>
             </div>
 
             <div class="row align-items-center g-4">
                 <div class="col-lg-4 order-2 order-lg-1">
-                    <div class="reveal-left">
-                        <a href="javascript:void(0);" class="nexus-card">
+                    <div class="reveal-left ">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-faucet-drip"></i></div>
                             <div>
                                 <h4>Water Treatment Plant</h4>
@@ -170,8 +207,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="reveal-left">
-                        <a href="javascript:void(0);" class="nexus-card">
+                    <div class="reveal-left  ">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-droplet-slash"></i></div>
                             <div>
                                 <h4>Waste Water Treatment</h4>
@@ -179,8 +216,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="reveal-left">
-                        <a href="javascript:void(0);" class="nexus-card">
+                    <div class="reveal-left  ">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-recycle"></i></div>
                             <div>
                                 <h4>Solid Waste Management</h4>
@@ -188,8 +225,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="reveal-left">
-                        <a href="javascript:void(0);" class="nexus-card">
+                    <div class="reveal-left  ">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-filter"></i></div>
                             <div>
                                 <h4>Iron Removal Solutions</h4>
@@ -214,7 +251,7 @@
 
                 <div class="col-lg-4 order-3">
                     <div class="reveal-right">
-                        <a href="javascript:void(0);" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                             <div>
                                 <h4>Operation & Maintenance</h4>
@@ -223,7 +260,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="javascript:void(0);" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-flask-vial"></i></div>
                             <div>
                                 <h4>Chemical Solutions</h4>
@@ -232,7 +269,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="javascript:void(0);" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-industry"></i></div>
                             <div>
                                 <h4>Demineralization Plant</h4>
@@ -241,7 +278,7 @@
                         </a>
                     </div>
                     <div class="reveal-right">
-                        <a href="javascript:void(0);" class="nexus-card">
+                        <a href="javascript:void(0);" class="nexus-card normal-cursor">
                             <div class="nexus-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
                             <div>
                                 <h4>Hydro Pneumatic Systems</h4>
@@ -276,7 +313,7 @@
         gsap.registerPlugin(ScrollTrigger);
 
         document.addEventListener("DOMContentLoaded", () => {
-            
+
             // Create Bubbles
             const container = document.getElementById('bubbleContainer');
             for (let i = 0; i < 15; i++) {
@@ -307,30 +344,30 @@
             });
 
             mainTl.to("#headerContent", { opacity: 1, y: 0, duration: 0.8 })
-                  .to("#imageContainer", { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.2)" }, "-=0.4")
-                  .from(".reveal-left", { 
-                      x: -50, 
-                      opacity: 0, 
-                      stagger: 0.15, 
-                      duration: 0.8, 
-                      ease: "power3.out" 
-                  }, "-=0.8")
-                  .from(".reveal-right", { 
-                      x: 50, 
-                      opacity: 0, 
-                      stagger: 0.15, 
-                      duration: 0.8, 
-                      ease: "power3.out" 
-                  }, "-=1")
-                  .from(".floating-badge", { scale: 0, opacity: 0, duration: 0.5 }, "-=0.5");
+                .to("#imageContainer", { opacity: 1, scale: 1, duration: 1, ease: "back.out(1.2)" }, "-=0.4")
+                .from(".reveal-left  ", {
+                    x: -50,
+                    opacity: 0,
+                    stagger: 0.15,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=0.8")
+                .from(".reveal-right", {
+                    x: 50,
+                    opacity: 0,
+                    stagger: 0.15,
+                    duration: 0.8,
+                    ease: "power3.out"
+                }, "-=1")
+                .from(".floating-badge", { scale: 0, opacity: 0, duration: 0.5 }, "-=0.5");
 
             // 3. 3D Tilt Effect
-            if(window.innerWidth > 991) {
+            if (window.innerWidth > 991) {
                 const tiltImg = document.querySelector("#tiltImg");
                 window.addEventListener("mousemove", (e) => {
                     const { clientX, clientY } = e;
                     const { innerWidth, innerHeight } = window;
-                    
+
                     const rotateY = ((clientX / innerWidth) - 0.5) * 20;
                     const rotateX = ((clientY / innerHeight) - 0.5) * -20;
 
@@ -346,4 +383,5 @@
         });
     </script>
 </body>
+
 </html>

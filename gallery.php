@@ -11,11 +11,11 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
     <?php include 'headerlink.php'; ?>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <style>
-        /* --- VPPL PREMIUM DESIGN SYSTEM --- */
         :root {
             --vppl-primary: #22a4d4;
             --vppl-secondary: #0a2d4d;
@@ -28,7 +28,7 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
 
         body { background-color: var(--vppl-white); font-family: 'Inter', sans-serif; overflow-x: hidden; }
 
-        /* --- Dynamic Hero Styling --- */
+        /* --- Hero Styling --- */
         .vppl-hero {
             height: 50vh;
             min-height: 400px;
@@ -39,10 +39,9 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
             align-items: center;
             color: #fff;
             clip-path: ellipse(150% 100% at 50% 0%);
+            overflow: hidden;
         }
         .vppl-hero-overlay {
-                        overflow: hidden;
-
             position: absolute;
             inset: 0;
             background: linear-gradient(to right, rgba(10, 45, 77, 0.85) 20%, rgba(10, 45, 77, 0.2));
@@ -87,10 +86,8 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
-            opacity: 0.9;
         }
 
-        /* --- Modern Hover Effect --- */
         .gallery-overlay {
             position: absolute;
             inset: 0;
@@ -117,32 +114,14 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
             transition: var(--transition);
         }
 
-        .gallery-item:hover .gallery-image {
-            transform: scale(1.1);
-            opacity: 0.6;
-            filter: blur(2px);
-        }
+        /* --- Hovers --- */
+        .gallery-item:hover .gallery-image { transform: scale(1.1); opacity: 0.7; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item:hover .view-btn { transform: translateY(0); }
 
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
+        .gallery-caption { color: #fff; transform: translateY(10px); transition: var(--transition); transition-delay: 0.1s; }
+        .gallery-item:hover .gallery-caption { transform: translateY(0); }
 
-        .gallery-item:hover .view-btn {
-            transform: translateY(0);
-        }
-
-        .gallery-caption {
-            color: #fff;
-            transform: translateY(10px);
-            transition: var(--transition);
-            transition-delay: 0.1s;
-        }
-
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-
-        /* --- Responsive Tweaks --- */
         @media (max-width: 768px) {
             .gallery-section { padding: 50px 0; }
             .vppl-hero { height: 40vh; min-height: 350px; }
@@ -157,7 +136,7 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
         <main id="content">
             <section class="vppl-hero" style="background-image: url('images/<?php echo $hero_bg; ?>');">
                 <div class="vppl-hero-overlay"></div>
-                <div class="container relative z-index-1000">
+                <div class="container position-relative" style="z-index: 10;">
                     <div class="vppl-hero-content">
                         <ul class="vppl-breadcrumb">
                             <li><a href="index.php">Home</a></li>
@@ -166,15 +145,13 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
                         <h1 class="vppl-hero-title"><?php echo $hero_main_text; ?></h1>
                     </div>
                 </div>
-                <img style="filter: brightness(0) invert(1); opacity: 0.1;" src="images/vppl.svg" class="position-absolute end-0 bottom-0 w-25" alt="">
             </section>
 
             <section class="gallery-section">
                 <div class="container">
-                    <div class="row g-4">
+                    <div class="row g-4" id="vppl-gallery">
                         
                         <?php 
-                        // Array for easy management
                         $images = [
                             ['src' => 'about-img-1.webp', 'title' => 'Industrial RO System'],
                             ['src' => 'wat1.jpg', 'title' => 'ETP Implementation'],
@@ -186,7 +163,11 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
 
                         foreach ($images as $img): ?>
                         <div class="col-lg-4 col-md-6">
-                            <a href="images/<?php echo $img['src']; ?>" class="image-popup">
+                            <a href="images/<?php echo $img['src']; ?>" 
+                               data-pswp-width="1200" 
+                               data-pswp-height="800" 
+                               target="_blank"
+                               class="gallery-link">
                                 <div class="gallery-item gsap-reveal">
                                     <img src="images/<?php echo $img['src']; ?>" class="gallery-image" alt="<?php echo $img['title']; ?>">
                                     <div class="gallery-overlay">
@@ -213,6 +194,16 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
 
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+    
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe-lightbox.esm.min.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#vppl-gallery',
+            children: '.gallery-link',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.esm.min.js')
+        });
+        lightbox.init();
+    </script>
 
     <script>
         gsap.registerPlugin(ScrollTrigger);
@@ -232,7 +223,7 @@ $hero_main_text = "Our Projects <span class='vppl-gradient-text'>In Action</span
                 opacity: 1,
                 y: 0,
                 duration: 0.8,
-                delay: (i % 3) * 0.15, // Stagger effect for 3-column grid
+                delay: (i % 3) * 0.15,
                 ease: "power2.out"
             });
         });

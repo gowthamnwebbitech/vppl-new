@@ -35,10 +35,9 @@
                             <li><a href="core-products.php">Core Products</a></li>
                         </ul>
                     </li>
-
-
                     <li><a class="vppl-menu-link" href="news-event.php">News & Events</a></li>
                     <li><a class="vppl-menu-link" href="gallery.php">Gallery</a></li>
+                    <li><a class="vppl-menu-link" href="career.php">Career</a></li>
                     <li><a class="vppl-menu-link" href="contact.php">Contact</a></li>
 
                     <li class="vppl-mobile-footer d-lg-none">
