@@ -36,7 +36,6 @@
                         </ul>
                     </li>
 
-                    <li><a class="vppl-menu-link" href="core-products.php">Core Products</a></li>
 
                     <li><a class="vppl-menu-link" href="news-event.php">News & Events</a></li>
                     <li><a class="vppl-menu-link" href="gallery.php">Gallery</a></li>
