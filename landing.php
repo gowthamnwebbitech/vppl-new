@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Best Reverse Osmosis System Coimbatore | VPPL</title>
     <meta name="description" content="Discover the Top-rated Reverse Osmosis System Coimbatore by VPPL. Ensure efficiency and reliability for your water treatment needs.">
-
+    <link rel="icon" href="images/fav-icon.png" type="image/gif" sizes="16x16">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
